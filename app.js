@@ -9,8 +9,9 @@ let attStab = document.getElementById("attack-stab")
 let attBomb = document.getElementById("attack-bomb")
 let resButton = document.getElementById("restart-button")
 let startButton = document.getElementById("start-button")
-
 var cpuInterval;
+var gameOver = false;
+
 
 
 
@@ -42,18 +43,22 @@ function pPunch(){
     cHealth = cHealth - 3
     console.log(cHealth);
     cpuLoss()
-    pAnnounce.innerText = `You Used Punch`
+    pAnnounce.innerText = `You Used Punch You did 3 dmg`
     attPunch.setAttribute("disabled","")
-    setTimeout(ReenableP,2000)
+    if (gameOver == false){
+        setTimeout(ReenableP,2000)
+    }
     endGame()
 }
 function pStab(){
     cHealth = cHealth - 7
     console.log(cHealth);
     cpuLoss()
-    pAnnounce.innerText = `You Used Stab`
+    pAnnounce.innerText = `You Used Stab You did 7 dmg`
     attStab.setAttribute("disabled","")
-    setTimeout(ReenableS,0)
+    if (gameOver == false){
+        setTimeout(ReenableS,5000)
+    }
     endGame()
 }
 
@@ -61,27 +66,29 @@ function pBomb(){
     cHealth = cHealth - 10
     console.log(cHealth);
     cpuLoss()
-    pAnnounce.innerText = `You Used Bomb`
+    pAnnounce.innerText = `You Used Bomb You did 10 dmg`
     attBomb.setAttribute("disabled","")
-    setTimeout(ReenableB,0)
+    if (gameOver==false){
+        setTimeout(ReenableB,10000)
+    }
     endGame()    
 }
 
 function CPUattack(){
-    let cpuAttack = Math.floor(Math.random()*3)
+    let cpuAttack = Math.floor(Math.random()*4)
     if(cpuAttack == 0){
         pHealth = pHealth-3
-        cAnnounce.innerText = `The CPU punched you`
+        cAnnounce.innerText = `The CPU punched you You lost 3hp`
         console.log("punch");
         playerLoss()
     }else if(cpuAttack == 1){
         pHealth = pHealth -7
-        cAnnounce.innerText = `The CPU slammed you`
+        cAnnounce.innerText = `The CPU slammed you You lost 7hp`
         console.log("slam");
         playerLoss()
     }else{
         pHealth = pHealth-10
-        cAnnounce.innerText = `The CPU Fireballed you`
+        cAnnounce.innerText = `The CPU Fireballed you You lost 10hp`
         console.log("fireball");
         playerLoss()
     }
@@ -93,6 +100,7 @@ function CPUbehave(){
 
 function endGame(){
     if(pHealth<=0||cHealth<=0){
+        gameOver=true
         pAnnounce.innerText = `Game Over`
         cAnnounce.innerText = `Game Over`
         attPunch.setAttribute("disabled","")
@@ -112,6 +120,7 @@ function endGame(){
     
 }
 function restartGame(){
+    gameOver=false
     pHealth=100
     cHealth=100
     resButton.setAttribute("hidden","")
@@ -121,6 +130,7 @@ function restartGame(){
     attPunch.removeAttribute("disabled")
     attStab.removeAttribute("disabled")
     attBomb.removeAttribute("disabled")
+    
 }
 
 
