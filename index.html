@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>THUPER THASH</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="final img-fluid text-light">
+
+    <header class="text-center bg-dark text-light pt-2">
+        <h1>Super FIGHT!!!!!!</h1>
+    </header>
+    <main class="container-fluid final" >
+        <!-- Fighter Announce Start -->
+        <div class="row text-center ">
+            <div class="col-6 name">
+              <h3> Lonk </h3>  
+            </div>
+            <div class="col-6 name">
+                <h3> Marior </h3>
+            </div>
+        </div>
+        <!-- Fighter Announce End -->
+        <!-- Fighter Img Start -->
+        <div class="row text-center justify-content-center">
+            <div class="col-6 pr-5 fighterHeight justify-content-left">
+                <img src="link.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-6 justify-content-center pl-5 fighterHeight">
+                <img src="mario.webp" class="img-fluid" alt="">
+            </div>
+        </div>
+        <!-- Fighter Img End -->
+        <!-- Button Start -->
+        <div class="row">
+            <div class="col-6">
+                <div class="row text-center">
+                    <div class="col-4">
+                        <button class="btn btn-info shadow"onclick="pPunch()"id="attack-punch" disabled>Punch</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-info shadow"onclick="pStab()"id="attack-stab"disabled>Stab</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-info shadow"onclick="pBomb()"id="attack-bomb"disabled>Bomb</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                
+            </div>
+        </div>
+        <!-- Button End -->
+        <!-- Health Start -->
+        <div class="row text-center">
+            <div class="col-6" >
+                <b id="player-health">100</b>
+            </div>
+            <div class="col-6">
+                <b id="cpu-health">100</b>
+            </div>
+        </div>
+        <!-- Health End -->
+        <!-- Announcer Start -->
+        <div class="row text-center">
+            <div class="col-6 ">
+                <h5 id="player-announce"></h5>
+            </div>
+            <div class="col-6">
+                <h5 id="cpu-announce"></h5>
+            </div>
+        </div>
+        <!-- Announcer End -->
+        <!-- Restart Start -->
+        <div class="row text-center">
+            <div class="col">
+                <button class="btn btn-info shadow" hidden id="restart-button" onclick="restartGame()">
+                    Restart Game?
+                </button>
+                <button class="btn btn-info shadow" id="start-button" onclick="startGame()">
+                    Start Game?
+                </button>
+            </div>
+        </div>
+
+    </main>
+    <footer class= "bg-dark text-center text-light">
+        made by Zintendo
+    </footer>
+      
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

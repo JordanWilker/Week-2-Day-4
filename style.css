@@ -1,0 +1,21 @@
+body { min-height: 100vh; display: flex; flex-direction: column; }
+header{ height: 10vh } 
+main{flex-grow: 1;} 
+footer{ height: 3vh}
+
+
+.final{
+    background-image: url(https://i.ytimg.com/vi/52i7DhGWO8Q/maxresdefault.jpg);  
+    background-repeat: no-repeat; 
+    object-fit: cover;
+    background-size: cover;
+}
+.fighterHeight{
+    border: 1px;
+    max-width: 28vw;
+    height:auto;
+}
+
+.name{
+    background-color: rgba(0, 0, 0, 0.137);
+}
